@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/lightbox.css" />
 	</head>
 	<body class="is-preload">
 
@@ -47,30 +48,24 @@
 									<img src="images/banner1.jpg" alt="" />
 								</div>
 								<div class="container">
-									<header class="major">
-										<h2>Catalyst Robot Ros</h2>
+									<header class="major2">
+										<h2>Linear Time Invariant State Space System Identification Using Adam Optimization</h2>
 									</header>
-									<p>This was a project that aimed to replace the old control interface of a catalyst robot, at the mechatonics lab of Ain Shams University, that could only be done with MATLAB.
-										The project goals were to:
-										<ul>
-											<li>Build an interface for the old PCI data acquisition card on Ubuntu.</li>
-											<li>Make proper ROS packages for the robot.</li>
-											<li>Apply different control schemes on the robot: Position, Impedance, and Admittance.</li>
-										</ul> 
-										Unforetunately due to the pandemic and the lockdown, all goals could not be achieved.<br/>
+									<p> 
+										In this paper, I have used Tensorflow's Adam optimizer to optimize state space matrices that makes a linear model that fits  given sets of input and output variables.
+										Some assumptions were made to the model and the technique was tested and proven to work even with high noise to signal ratios. 
+										Moreover, the technique successfully identified a system that violates some of the assumptions the model was built on, showing great potential in this technique. 
 
-										here are some videos showing the progress that was done.								
-										</p>
+										<br/><br/>The paper is on IEEEXplore and I have published the code for this paper and some examples on my GitHub.
+									</p>
+									<ul class="feature-icons">
+											
+										<li class="icon solid fa-book"><a onclick="window.open('https://ieeexplore.ieee.org/document/9047808/','_blank');">The paper</a></li>
+										<li class="icon brands fa-github"><a onclick="window.open('https://github.com/MarkNaeem/System-Identification-Tensorflow','_blank');">Code</a></li>
+										<li class="icon brands fa-github"><a onclick="window.open('https://github.com/MarkNaeem/System-Identification-Tensorflow-Examples','_blank');">Examples</a></li>
+									</ul>
 
-									<video width="720" height="480" controls >
-											<source src="videos/catalyst/catalyst1.mp4" type="video/mp4">
-										</video>
-									<br/>There was a plan to mount the robot on a linear platform:												
-									<video width="720" height="480" controls >
-										<source src="videos/catalyst/catalyst2.mp4" type="video/mp4">
-									</video>												
-									<br/><br/>	
-										<ul><a href="#" onclick="window.location.href='index.html#three'" class="button">Back</a></ul>
+									<ul><a href="#" onclick="window.location.href='index.html#three'" class="button">Back</a></ul>
 
 								</div>
 							</section>
@@ -92,6 +87,7 @@
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/lightbox.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>

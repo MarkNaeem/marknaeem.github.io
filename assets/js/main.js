@@ -3,6 +3,18 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+function onClick2  () {
+	navigator.clipboard.writeText('marknaeem@yahoo.com');
+	var copyobj = document.getElementById('copy-in-place')
+	copyobj.innerHTML= 'copied!';
+
+	let key = setTimeout(()=>{
+		copyobj.innerHTML= 'Email';
+		clearTimeout(key);
+	}, 750)
+}
+
+
 const onClick = () =>{
 	navigator.clipboard.writeText('marknaeem@yahoo.com');
 	const copyBox = document.getElementsByClassName('copy-box')
