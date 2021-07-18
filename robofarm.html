@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/lightbox.css" />
 	</head>
 	<body class="is-preload">
 
@@ -48,9 +49,9 @@
 								</div>
 								<div class="container">
 									<header class="major">
-										<h2>Autonomous Fruit Picking Robot.</h2>
+										<h2>Autonomous Fruit Picking Robot</h2>
 									</header>
-									<p>This project was supervised by University of Lincoln, UK and Ainshams University, Egypt.
+									<p>This graduation project was supervised by University of Lincoln, UK and Ainshams University, Egypt.
 										The main target of the project is to design and build an autonomous platform suitable for doing multiple agricultural tasks.								
 										This project aims on designing the platform itself and the first module of this platform which is an autonomous fruit picking module based on a 6-DoF robotic arm.
 
@@ -70,11 +71,13 @@
 										
 										For the strawberry detection, we used YOLACT algorithm. The robot behaviour was simple; it keeps patrolling through a registered array of waypoints, a pause service is called once it localizes a mature fruit. Then, it plans a trajectory for the robotic arm to pick the fruit, picks it, and a resume service is then called to continue patrolling. 
 
-										Due to the pandemic and the lockdown, manufacturing the platform was a challenge. We had a small test platform  where we tested all the algorithms. The following figures shows the test platform, the rqt_graph on the robot and the behaviour diagram of the robot.
+										Due to the pandemic and the lockdown, manufacturing the platform was a challenge. We had a small test platform where we tested all the algorithms. The following figures shows the test platform, some figures of the progress we could make in manufacturing the platform, the rqt_graph on the robot and the behaviour diagram of the robot.
 										</p>
 
 										<div class="gallery">
 											<a href="images/robofarm-platform.jpg" data-lightbox="mygallery" data-title="The real platform that was used for testing"><img src="images/robofarm-platform.jpg"></a>
+											<a href="images/robofarm-real1.jpeg" data-lightbox="mygallery" data-title="The real platform"><img src="images/robofarm-real1.jpeg"></a>
+											<a href="images/robofarm-real2.jpeg" data-lightbox="mygallery" data-title="The real platform"><img src="images/robofarm-real2.jpeg"></a>
 											<a href="images/robofarm-rosgraph.png" data-lightbox="mygallery" data-title="The rosgraph of the test robot"><img src="images/robofarm-rosgraph.png"></a>
 											<a href="images/robofarm-behavior.png" data-lightbox="mygallery" data-title="The behaviour diagram of the robot with move_base_sequence"><img src="images/robofarm-behavior.png"></a>
 										</div>
@@ -86,6 +89,10 @@
 										<br/>This video shows the robotic platform in simulation.
 										<video width="720" height="480" controls >
 											<source src="videos/robofarm/robofarm-sim.mp4" type="video/mp4">
+										</video>											
+										The last video when the robot localizes an object and stops and moves the arm to grasp it. Grasping was not simulated (fruit should be handled with a soft gripper).
+										<video width="720" height="480" controls >
+											<source src="videos/robofarm/robofarm-grasping.mp4" type="video/mp4">
 										</video>												
 										<br/><br/>	
 										<ul><a href="#" onclick="window.location.href='index.html#three'" class="button">Back</a></ul>
@@ -110,6 +117,7 @@
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/lightbox.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
