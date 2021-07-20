@@ -9,7 +9,7 @@ function onClick2  () {
 	copyobj.innerHTML= 'copied!';
 
 	let key = setTimeout(()=>{
-		copyobj.innerHTML= 'Email';
+		copyobj.innerHTML= 'Copy Email Address';
 		clearTimeout(key);
 	}, 750)
 }
