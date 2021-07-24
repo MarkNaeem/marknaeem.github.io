@@ -78,11 +78,18 @@
 										<video width="720" height="480" controls >
 											<source src="../videos/swerve/swervesteering-video2.mp4" type="video/mp4">
 										</video>
-										<br/><br/>As I've said, the center of rotation of the robot can be changed to anywhere. In the video above the center of rotation was the center of the link holding the two robots together. In the upcoming video, the center of rotation is moved to the center of the rear platform. 
+										<br/><br/>As I've said, the center of rotation of the robot can be changed to anywhere. In the video above, the center of rotation was the center of the link holding the two robots together. In the upcoming video, the center of rotation is moved to the center of the rear platform. 
 										<video width="720" height="480" controls >
 											<source src="../videos/swerve/swervesteering-video3.mp4" type="video/mp4">
 										</video>
 									
+										<br/><br/>There is also an odometry node. It can work with any number of wheels. It takes two joints for each wheel;  the steering joint to get the steering angle , and the wheel joint to get the wheel angular velocity. This video is a demo of the node showing the odometry published from gazebo (/odom) and the calculated odometry (/odom2).
+										<video width="720" height="480" controls >
+											<source src="../videos/swerve/swervesteering_odom.mp4" type="video/mp4">
+										</video>
+										<br/>In order for this node to work correctly, the child_frame_id of the odom topic will be the center of rotation of the robot. So it has to be set correctly along with the wheels configurations (if set via a yaml file).
+					
+
 										</p>
 										
 										<ul><a href="../index.html#three" class="button">Back</a></ul>
