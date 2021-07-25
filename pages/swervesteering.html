@@ -53,7 +53,7 @@
 									</header>
 									<p>This is a ROS package that can be used to control swerve steering robots with any number of wheels and configurations and can be actually used to control many other wheels configurations.
 										<br/><br/> The package takes care of wheel steering angle limitation (if it has any) and calculates the closest position considering the angle's supplementary value (i.e. if the wheel is ordered to steer to 90 and its closer to -90, it chooses the -90 and flips the direction of rotation to match the required position).
-										The package also takes the configurations of wheel positions and wheel raduis from a yaml file or from the /tf topic.
+										The configurations are given through a yaml file and/or from the /tf topic.
 										<br/><br/> <b>What can it do more than four_wheel_Steering ros controller?</b>
 										<ul>
 											<li>It can handle any number of wheels with any irregular configurations, like different steering angle limitations, different radii, different locations with respect to base frame...etc.</li>
@@ -61,7 +61,7 @@
 											<li>The center of rotation is variable and can be configured on the fly. This means that if your four wheels swerve steering robot needs to act like a differential robot, you can move the center of rotation to the middle of the line connecting the two differential wheels centers. the package will take care of everything and drive th wheels correctly. </li>
 										</ul>
 										
-										To test the logic in the package, I made a quick tkinter GUI that's linked to a simulated square robot with four swerve steering wheels. It basically helped me to visualize how the algorithm decides to move the wheel given the motion command. The colored sector shows the current steering angle, and the red shading of one side of each arrow shows the direction at which the wheel is rotating.  You can also look at the two figures that explain why considering both the wheel steering angle limitation and the steering command's angle supplementary are important.
+										To test the logic in the package, I made a quick tkinter GUI that's linked to a simulated square robot with four swerve steering wheels. It basically helped me to visualize how the algorithm decides to move the wheel given the motion command. The colored sector shows the current steering angle, and the red shading of one side of each arrow shows the direction at which the wheel is rotating.  You can also look at the two figures explaining why considering both the wheel steering angle limitation and the steering angle supplementary are important.
 										
 										<div class="gallery">
 											<a href="../images/swervesteering-testing.png" data-lightbox="mygallery" data-title="The simple Tkinter testing GUI"><img src="../images/swervesteering-testing.png"></a>
@@ -69,7 +69,7 @@
 										</div>
 	
 	
-										<br/><br/>I am currently working on making this work as a contribution to ros control and it's not published yet. If you would like to discuss some details, want to contribute to the package, or have any ideas to add, do not hesitate to contact me.
+										<br/><br/>I am  working on preparing this work as a contribution to ros control and it's not published yet. If you would like to discuss some details, want to contribute to the package, or have any ideas to add, do not hesitate to contact me.
 
 										<br/><br/> Here are some videos showing the package working.
 										<video width="720" height="480" controls >
@@ -90,6 +90,10 @@
 										<br/>In order for this node to work correctly, the child_frame_id of the odom topic will be the center of rotation of the robot. So it has to be set correctly along with the wheels configurations (if set via a yaml file).
 					
 
+										Those videos have been added to YouTube.
+										<iframe width="560" height="315" src="https://www.youtube.com/embed/Xn33Ed8p1jw" title="YouTube video player" frameborder="0"
+										 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+										</iframe>
 										</p>
 										
 										<ul><a href="../index.html#three" class="button">Back</a></ul>
