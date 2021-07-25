@@ -24,7 +24,9 @@ section, summary, time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;}
-
+/* video {
+	width: 720px;
+} */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
@@ -110,7 +112,7 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		border-bottom: solid 1px #e4e4e4;
+		/* border-bottom: solid 1px #e4e4e4; */
 		color: inherit;
 		text-decoration: none;
 	}
@@ -970,7 +972,9 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 1024px) {
-
+			video, iframe{
+				width: 80% !important;
+			}
 			.row {
 				display: flex;
 				flex-wrap: wrap;
@@ -1215,7 +1219,7 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 736px) {
-
+		
 			.row {
 				display: flex;
 				flex-wrap: wrap;
@@ -3330,7 +3334,7 @@ input, select, textarea {
 			input[type="reset"],
 			input[type="button"],
 			.button {
-				padding: 0;
+				padding: 0px 5px;
 			}
 
 	}
