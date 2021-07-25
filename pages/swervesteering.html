@@ -85,9 +85,10 @@
 									
 										<br/><br/>There is also an odometry node. It can work with any number of wheels. It takes two joints for each wheel;  the steering joint to get the steering angle , and the wheel joint to get the wheel angular velocity. This video is a demo of the node showing the odometry published from gazebo (/odom) and the calculated odometry (/odom2).
 										<video width="720"  controls >
-											<source src="../videos/swerve/swervesteering_odom.mp4" type="video/mp4">
+											<source src="../videos/swerve/swervesteering-odom.mp4" type="video/mp4">
 										</video>
-										<br/>In order for this node to work correctly, the child_frame_id of the odom topic will be the center of rotation of the robot. So it has to be set correctly along with the wheels configurations (if set via a yaml file).
+										<br/>In order for this node to work correctly, the child_frame_id of the odom topic will be the center of rotation of the robot. So it has to be set correctly along with the wheels configurations (if set via a yaml file). The odometry method has a problem with singularities which will be solved soon.
+
 					
 
 										Those videos have been added to YouTube.
