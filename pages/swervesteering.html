@@ -54,17 +54,17 @@
 									<p>
 										Please check <a href="https://discourse.ros.org/u/MarkNaeem/summary" target="_blank" style="color:#4acaa8">  ROS Discourse </a> for any discussion about the project.<br/><br/>
 																				
-										This is a ROS package that can be used to control swerve steering robots with any number of wheels and configurations and can be actually used to control many other wheels configurations.
-										<br/><br/> The package takes care of wheel steering angle limitation (if it has any) and calculates the closest position considering the angle's supplementary value (i.e. if the wheel is ordered to steer to 90 and its closer to -90, it chooses the -90 and flips the direction of rotation to match the required position).
-										The configurations are given through a yaml file and/or from the /tf topic.
+										This is a <i>ros_controller</i> package that can be used to control omnidirectional non-holonomic robotic platforms with any number of regular wheels and configurations (raduis, position, steering limitations, offset...etc.).
+										
+										<br/><br/> The controller takes care of wheel steering angle limitation (if it has any) and calculates the closest position considering the angle's supplementary value (i.e. if the wheel is ordered to steer to 90 and its closer to -90, it chooses the -90 and flips the direction of rotation to match the required position).
+										Each wheel has its own configuration parameters. They are all set through the parameters server. Some parameters (like the wheels' position relative to ) can be taken from the /tf tree.
 										<br/><br/> <b>What can it do more than four_wheel_Steering ros controller?</b>
 										<ul>
 											<li>It can handle any number of wheels with any irregular configurations, like different steering angle limitations, different radii, different locations with respect to base frame...etc.</li>
-											<li>It takes configuration from a yaml file or from /tf, which means if, for any reason, the robot's wheels positons are changing, the package will keep track and calculate proper speed and steering angle. </li>
-											<li>The center of rotation is variable and can be configured on the fly. This means that if your four wheels swerve steering robot needs to act like a differential robot, you can move the center of rotation to the middle of the line connecting the two differential wheels centers. the package will take care of everything and drive th wheels correctly. </li>
+											<li>It can take static or dynamic configuration from a yaml file or from /tf, which means if, for any reason, the robot's wheels positons are changing, the controller will keep track and calculate proper speed and steering angle. </li>
+											<li>The base frame for rotation, , that is when the robot is purely rotating with no translation it will be rotating around this frame, is variable and can be configured on the fly. This means that if your four wheels swerve steering robot needs to act like a differential robot, you can move the base frame to the middle of the line connecting the two differential wheels centers. the package will take care of everything and drive th wheels correctly. </li>
 										</ul>
 										
-										To test the logic in the package, I made a quick tkinter GUI that's linked to a simulated square robot with four swerve steering wheels. It basically helped me to visualize how the algorithm decides to move the wheel given the motion command. The colored sector shows the current steering angle, and the red shading of one side of each arrow shows the direction at which the wheel is rotating.  You can also look at the two figures explaining why considering both the wheel steering angle limitation and the steering angle supplementary are important.
 										
 										<div class="gallery">
 											<a href="../images/swervesteering-testing.png" data-lightbox="mygallery" data-title="The simple Tkinter testing GUI"><img src="../images/swervesteering-testing.png"></a>
@@ -73,7 +73,7 @@
 	
 	
 										
-										<br/><br/>I am  working on preparing this work as a contribution to ros control and it's not published yet. If you would like to discuss some details, want to contribute to the package, or have any ideas to add, do not hesitate to contact me.
+										<br/><br/>Currently, the controller have been implemented, and many showed great interest in the work and want to join the development and maintenance. Unfortunately, there is some issues with the odometry calculations and we're working on it. So, it's not published yet. If you would like to discuss some details, want to contribute to the package, or have any ideas to add, do not hesitate to contact me.
 										<br/><br/> Here are some videos showing the package working.
 										<video width="720"  controls >
 											<source src="../videos/swerve/swervesteering-video1.mp4" type="video/mp4">
@@ -81,7 +81,7 @@
 										<video width="720"  controls >
 											<source src="../videos/swerve/swervesteering-video2.mp4" type="video/mp4">
 										</video>
-										<br/><br/>As I've said, the center of rotation of the robot can be changed to anywhere. In the video above, the center of rotation was the center of the link holding the two robots together. In the upcoming video, the center of rotation is moved to the center of the rear platform. <br/>
+										<br/><br/>As I've said, the base frame of the robot can be changed to anywhere. In the video above, the base frame was the center of the link holding the two robots together. In the upcoming video, the base frame is moved to the center of the rear platform. <br/>
 										<video width="720"  controls >
 											<source src="../videos/swerve/swervesteering-video3.mp4" type="video/mp4">
 										</video>
@@ -90,7 +90,7 @@
 										<video width="720"  controls >
 											<source src="../videos/swerve/swervesteering-odom.mp4" type="video/mp4">
 										</video>
-										<br/>In order for this node to work correctly, the child_frame_id of the odom topic will be the center of rotation of the robot. So it has to be set correctly along with the wheels configurations (if set via a yaml file). The odometry method has a problem with singularities which will be solved soon.
+										<br/>In order for this node to work correctly, the child_frame_id of the odom topic will be the base frame of the robot. So it has to be set correctly along with the wheels configurations (if set via a yaml file). The odometry method has a problem with singularities which will be solved soon.
 
 					
 
