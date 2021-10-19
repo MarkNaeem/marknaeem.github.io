@@ -3361,6 +3361,15 @@ input, select, textarea {
 	transform: scale(1.1);
 }
 
+.bigthumb-upcoming a{
+	transition: 500ms;
+}
+
+/* .bigthumb-upcoming a:hover{
+	transform: scale(1.1);
+} */
+
+
 .iframe-container{
 	position: relative;
 	width: 100%;
