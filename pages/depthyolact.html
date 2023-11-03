@@ -50,12 +50,12 @@
 									<header class="major">
 										<h2>Depth Yolact ROS</h2>
 									</header>
-									<p>This is a  ROS wrapper for Yolact that extends the already existing wrapper by utilizing a depth image to generate 3D bounding boxes and pointclouds of the detected objects.
+									<p>This is a  ROS wrapper for Yolact that extends it by utilizing a depth image to generate 3D bounding boxes and pointclouds of the detected objects.
 										<ul class="feature-icons">											
 											<li class="icon brands fa-github"><a href="https://github.com/MarkNaeem/depth_yolact_ros" target="_blank">GitHub</a></li>
 										</ul>
 										depth_yolact_ros takes the detection boxes and the associated masks, crops the depth image, takes the masked pixels, converts them to a pointcloud using the camera_info, then filters the points for any mislabeled pixel in the mask using k-means clustering first, then a Gaussian model to reject outliers on the depth axis. Each detected instance runs on a thread and all results are published on a MarkerArray topic and a pointcloud topic.
-										<br/><br/>There is a lot of modifications that can be done to make the package much faster. I have included a <i>what's next?</i> section in the Github repo. Please feel free to contact me if you have any questions!
+										<br/><br/>The package is running around 10 Hz on a 4Gb GPU with a realsense camera. There is a lot of modifications that can be done to make the package much faster. I have included a <i>what's next?</i> section in the Github repo. Please feel free to contact me if you have any questions!
 	
 										<br/><br/>Below are two videos showing the the package working on a real D435i camera and in gazebo with a D435 camera on a turtlebot robot.										
 										
