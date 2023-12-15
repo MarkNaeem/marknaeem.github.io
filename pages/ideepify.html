@@ -56,7 +56,7 @@
 											IDeepify is deep learning-based. It consists of four parts:
 											<li><b>ID localization and cropping:</b> Detects the face or the back of the ID, extracts the corners, and crops the ID.</li>
 											<li><b>Face detection and verification:</b> Extracts the face picutre from the ID and verifies it is the same person in the selfie picutre.</li>
-											<li><b>Text segmentation:</b> A neural network-based filter removes the background and only keeps the text to ease the OCR step. </li>
+											<li><b>Text segmentation:</b> A segmentation network the background and only keeps the text to ease the OCR step. </li>
 											<li><b>OCR:</b> Optical character recognition step, and the final one.</li>
 										</ul>
 										Second stage of face verification utilizes a collection of pre-trained face verification models. The "meta-model" was then finetuned with a few pairs of (Selfie, ID). Finally, the total accuracy was tested with <a  onclick="window.open('http://vintage.winklerbros.net/facescrub.html','_blank');">FaceScrub Dataset</a> and it was 92%.
