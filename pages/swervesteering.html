@@ -5,138 +5,173 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Mark's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<link rel="stylesheet" href="../assets/css/lightbox.css" />
-	</head>
-	<body class="is-preload">
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="../images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Mark Naeem</a></h1>
-					<p>I'm Mark and this is my portfolio.<br />
-					Hope you like it! :)</p>
-				</header>
-				<nav id="nav">
-					<ul>
+<head>
+	<title>Mark's Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<link rel="stylesheet" href="../assets/css/lightbox.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<section id="header">
+		<header>
+			<span class="image avatar"><img src="../images/avatar.jpg" alt="" /></span>
+			<h1 id="logo"><a href="#">Mark Naeem</a></h1>
+			<p>I'm Mark and this is my portfolio.<br />
+				Hope you like it! :)</p>
+		</header>
+		<nav id="nav">
+			<ul>
+			</ul>
+		</nav>
+		<footer>
+			<div class="copy-box">COPIED!</div>
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/mark-naeem" target="_blank"
+						class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/MarkNaeem" target="_blank" class="icon brands fa-github"><span
+							class="label">Github</span></a></li>
+				<li onclick="onClick();"><a style="cursor:pointer" class="icon solid fa-envelope"><span
+							class="label">Email</span></a></li>
+			</ul>style="cursor:pointer"
+		</footer>
+	</section>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- One -->
+			<section id="one">
+				<div class="image main" data-position="bottom">
+					<img src="../images/banner1.jpg" alt="" />
+				</div>
+				<div class="container">
+					<header class="major">
+						<h2>Swerve Steering ROS Controller</h2>
+					</header>
+					<p>
+					<ul class="feature-icons">
+						<li class="icon solid fa-book"><a href="https://discourse.ros.org/u/MarkNaeem/summary"
+								target="_blank">ROS Discourse</a></li>
+						<li class="icon brands fa-github"><a href="https://github.com/MarkNaeem/ros_controllers"
+								target="_blank">Code</a></li>
+						<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/mark-naeem"
+								target="_blank">LinkedIn</a></li>
+						<li class="icon solid fa-envelope"><a href="mailto:marknaeem@yahoo.com"
+								target="_blank">Email</a></li>
 					</ul>
-				</nav>
-				<footer>
-					<div class="copy-box">COPIED!</div> 
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/mark-naeem" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/MarkNaeem" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li onclick="onClick();"><a style="cursor:pointer" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>style="cursor:pointer"
-				</footer>
+					Please give proper credits to the repository if you use it in your work. :)<br /><br />
+
+					This is a <i>ros_controller</i> package, part of ROS control, that can be used to control
+					omnidirectional non-holonomic robotic platforms with any number of regular wheels (AKA not mecanum
+					wheels) and configurations (radius, position, steering limitations, offset from its axis).
+
+					<br /><br /> The controller converts given velocity commands and converts it to wheels steering
+					angles and speeds.
+					It also takes care of each wheel's steering angle limitation (if any) and calculates the closest
+					position considering the steering angle's supplementary value
+					(i.e. if the wheel is ordered to steer to 90 and its closer to -90, it chooses the -90 and flips the
+					direction of rotation to match the required position).
+					<br><br>Each wheel has its own configuration parameters. They are all set through the parameters
+					server. Some parameters (like the wheels' position relative to the base frame) can be taken from the
+					/tf tree.
+					<br /><br /> <b>But what can it do more than four_wheel_Steering ros controller?</b>
+					<ul>
+						<li>It can handle any number of wheels with any irregular configurations such as different
+							steering angle limitations, different radii, and different locations with respect to base
+							frame.</li>
+						<li>It can take static or dynamic configuration from a yaml file or from /tf, which means if,
+							for any reason, the robot's wheels positons are changing, the controller will keep track and
+							calculate proper speed and steering angle. </li>
+						<li>The base frame is variable and can be configured on the fly. The base frame is defines the
+							pivot point that remains stationary under pure rotation. This gives the platform a lot of
+							flexibility (as shown in the videos below).
+					</ul>
+					<div class="gallery">
+						<a href="../images/swervesteering-testing.png" data-lightbox="mygallery"
+							data-title="The simple Tkinter testing GUI"><img
+								src="../images/swervesteering-testing.png"></a>
+						<a href="../images/swervesteering-illustration.png" data-lightbox="mygallery"
+							data-title="The illustration shows the importance of taking steering limits and supplementary angle in consideration"><img
+								src="../images/swervesteering-illustration.png"></a>
+					</div>
+					Given these points, a four wheels swerve steering robot can be a differential robot, with the same
+					controller!!
+
+
+					<br /><br /> Here are some videos showing the package working.
+					<video width="720" controls>
+						<source src="../videos/swerve/swervesteering-video1.mp4" type="video/mp4">
+					</video>
+					<video width="720" controls>
+						<source src="../videos/swerve/swervesteering-video2.mp4" type="video/mp4">
+					</video>
+					<br /><br />As I've said, the base frame of the robot can be changed to anywhere. In the video
+					above, the base frame was the center of the link holding the two robots together. In the upcoming
+					video, the base frame is moved to the center of the rear platform. <br />
+					<video width="720" controls>
+						<source src="../videos/swerve/swervesteering-video3.mp4" type="video/mp4">
+					</video>
+
+					<br /><br />There is also an odometry node. It can work with any number of wheels. It takes two
+					joints for each wheel; the steering joint to get the steering angle , and the wheel joint to get the
+					wheel angular velocity. This video is a demo of the node showing the odometry published from gazebo
+					(/odom) and the calculated odometry (/odom2).
+					<video width="720" controls>
+						<source src="../videos/swerve/swervesteering-odom.mp4" type="video/mp4">
+					</video>
+					<br />In order for this node to work correctly, the child_frame_id of the odom topic will be the
+					base frame of the robot. So it has to be set correctly along with the wheels configurations (if set
+					via a yaml file).
+
+
+					<br /><br />the videos above have been added to YouTube.
+					<div class="iframe-container">
+						<iframe width="720" height="480" src="https://www.youtube.com/embed/pYArjy_tAoY"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen></iframe>
+					</div>
+					</p>
+
+					<ul><a href="../index.html#three" class="button">Back</a></ul>
+
+				</div>
 			</section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- One -->
-							<section id="one">
-								<div class="image main" data-position="bottom" >
-									<img src="../images/banner1.jpg" alt="" />
-								</div>
-								<div class="container">
-									<header class="major">
-										<h2>Swerve Steering ROS Controller</h2>
-									</header>
-									<p>
-										Please check ROS Discourse for any discussion about the project, email me to add you to slack if you think you can help, follow my posts on LinkedIn as I constantly talk about what I do, or have a look at the code on Github. PLease give proper credits to the repo if you use it in your work.<br/><br/>
-										<ul class="feature-icons">
-												
-											<li class="icon solid fa-book"><a href="https://discourse.ros.org/u/MarkNaeem/summary" target="_blank">ROS Discourse</a></li>
-											<li class="icon brands fa-github"><a href="https://github.com/MarkNaeem/ros_controllers" target="_blank">Code</a></li>
-											<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/mark-naeem" target="_blank">LinkedIn</a></li>
-											<li class="icon solid fa-envelope"><a href="mailto:marknaeem@yahoo.com" target="_blank">Email</a></li>
-										</ul>
-																				
-										This is a <i>ros_controller</i> package that can be used to control omnidirectional non-holonomic robotic platforms with any number of regular wheels and configurations (radius, position, steering limitations, offset...etc.).
-										
-										<br/><br/> The controller takes care of wheel steering angle limitation (if it has any) and calculates the closest position considering the angle's supplementary value (i.e. if the wheel is ordered to steer to 90 and its closer to -90, it chooses the -90 and flips the direction of rotation to match the required position).
-										Each wheel has its own configuration parameters. They are all set through the parameters server. Some parameters (like the wheels' position relative to ) can be taken from the /tf tree.
-										<br/><br/> <b>What can it do more than four_wheel_Steering ros controller?</b>
-										<ul>
-											<li>It can handle any number of wheels with any irregular configurations, like different steering angle limitations, different radii, different locations with respect to base frame...etc.</li>
-											<li>It can take static or dynamic configuration from a yaml file or from /tf, which means if, for any reason, the robot's wheels positons are changing, the controller will keep track and calculate proper speed and steering angle. </li>
-											<li>The base frame for rotation,that is when the robot is purely rotating with no translation it will be rotating around this frame, is variable and can be configured on the fly. This means that if your four wheels swerve steering robot needs to act like a differential robot, you can move the base frame to the middle of the line connecting the two differential wheels centers. the package will take care of everything and drive th wheels correctly. </li>
-										</ul>
-										
-										
-										<div class="gallery">
-											<a href="../images/swervesteering-testing.png" data-lightbox="mygallery" data-title="The simple Tkinter testing GUI"><img src="../images/swervesteering-testing.png"></a>
-											<a href="../images/swervesteering-illustration.png" data-lightbox="mygallery" data-title="The illustration shows the importance of taking steering limits and supplementary angle in consideration"><img src="../images/swervesteering-illustration.png"></a>
-										</div>
-	
-	
-										
-										<br/><br/>Currently, the controller have been implemented, and many showed great interest in the work and want to join the development and maintenance. Unfortunately, there is some issues with the odometry calculations and we're working on it. So, it's not published yet. If you would like to discuss some details, want to contribute to the package, or have any ideas to add, do not hesitate to contact me.
-										<br/><br/> Here are some videos showing the package working.
-										<video width="720"  controls >
-											<source src="../videos/swerve/swervesteering-video1.mp4" type="video/mp4">
-										</video>
-										<video width="720"  controls >
-											<source src="../videos/swerve/swervesteering-video2.mp4" type="video/mp4">
-										</video>
-										<br/><br/>As I've said, the base frame of the robot can be changed to anywhere. In the video above, the base frame was the center of the link holding the two robots together. In the upcoming video, the base frame is moved to the center of the rear platform. <br/>
-										<video width="720"  controls >
-											<source src="../videos/swerve/swervesteering-video3.mp4" type="video/mp4">
-										</video>
-									
-										<br/><br/>There is also an odometry node. It can work with any number of wheels. It takes two joints for each wheel;  the steering joint to get the steering angle , and the wheel joint to get the wheel angular velocity. This video is a demo of the node showing the odometry published from gazebo (/odom) and the calculated odometry (/odom2).
-										<video width="720"  controls >
-											<source src="../videos/swerve/swervesteering-odom.mp4" type="video/mp4">
-										</video>
-										<br/>In order for this node to work correctly, the child_frame_id of the odom topic will be the base frame of the robot. So it has to be set correctly along with the wheels configurations (if set via a yaml file). The odometry method has a problem with singularities which will be solved soon.
-
-					
-
-										<br/><br/>the videos above have been added to YouTube.
-										<div class="iframe-container">
-											<iframe width="720" height="480" src="https://www.youtube.com/embed/pYArjy_tAoY" title="YouTube video player" frameborder="0" 
-											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>										
-										</div>
-										</p>
-										
-										<ul><a href="../index.html#three" class="button">Back</a></ul>
-
-								</div>
-							</section>
 
 
+		</div>
 
-					</div>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
-
+		<!-- Footer -->
+		<section id="footer">
+			<div class="container">
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved.</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
 			</div>
+		</section>
 
-		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/lightbox.js"></script>
-			<script src="../assets/js/jquery.scrollex.min.js"></script>
-			<script src="../assets/js/jquery.scrolly.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
+	</div>
 
-	</body>
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/lightbox.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+
+</body>
+
 </html>

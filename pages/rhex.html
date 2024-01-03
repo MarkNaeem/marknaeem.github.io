@@ -5,113 +5,142 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Mark's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<link rel="stylesheet" href="../assets/css/lightbox.css" />
-	</head>
-	<body class="is-preload">
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="../images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Mark Naeem</a></h1>
-					<p>I'm Mark and this is my portfolio.<br />
-					Hope you like it! :)</p>
-				</header>
-				<nav id="nav">
+<head>
+	<title>Mark's Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<link rel="stylesheet" href="../assets/css/lightbox.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<section id="header">
+		<header>
+			<span class="image avatar"><img src="../images/avatar.jpg" alt="" /></span>
+			<h1 id="logo"><a href="#">Mark Naeem</a></h1>
+			<p>I'm Mark and this is my portfolio.<br />
+				Hope you like it! :)</p>
+		</header>
+		<nav id="nav">
+			<ul>
+			</ul>
+		</nav>
+		<footer>
+			<div class="copy-box">COPIED!</div>
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/mark-naeem" target="_blank"
+						class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/MarkNaeem" target="_blank" class="icon brands fa-github"><span
+							class="label">Github</span></a></li>
+				<li onclick="onClick();"><a style="cursor:pointer" class="icon solid fa-envelope"><span
+							class="label">Email</span></a></li>
+			</ul>
+		</footer>
+	</section>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- One -->
+			<section id="one">
+				<div class="image main" data-position="bottom">
+					<img src="../images/banner1.jpg" alt="" />
+				</div>
+				<div class="container">
+					<header class="major">
+						<h2>RHex</h2>
+					</header>
+					<p>RHex was a project that I worked on as an undergraduate visiting resaercher at the university of
+						central Lanchasire (UCLan). The visit was a grant by Erasmus+. UCLan and Erasmus representitives
+						test-ed and interviewed the top students of Ainshams University, me and another colleauge were
+						selected for the first time from our university. The visit was 92 days in Summer
+						2019.<br /><br />
+
+						The task was to build an off-road mobile platform. We were then asked to build the simple
+						hexabot RHex robot. So, I was chosen to Lead a team of three undergraduate researchers (me and
+						two others). My tasks were to manage and balance the work between team members, and I was
+						responsible for the software, simulation, and control part.
+
+						<br /><br /><b>What did I do in the project?</b>
 					<ul>
+						<li>Proposed a new design for the complinet leg of the robot. RHex original design uses a C
+							shaped leg and depends on the springiness of the structure and the material properties. I
+							desigend a rigid three-segment leg with an RC car or bike suspension spring damper as the
+							source of compliance in the system. This should make the whole manufacturing process easier
+							and eliminate an annoying point of failure (failure of the compliant component of the leg).
+							Moreover, the damper stifness is variable, which gives the system more freedom to work on
+							many terrains.</li>
+						<li>Led a team consisting of three researchers to design, simulate, and build the robot.</li>
+						<li>Designed the joints trajectories so that at least three legs should be incontact with the
+							ground at any given time.</li>
+						<li>Designed the leg joints velocity profiles based on the robot's locomotion and gait analysis.
+						</li>
+						<li>Wrote the embedded code that controlled each joint to follow its trajectory.</li>
+						<li>Build the robot in vrep simulation, and made a simple demo logic with an ultrasonic sensor
+							to turn the robot when it senses a wall.</li>
+						<li>Implemented all this in a real simple and low-cost platform.</li>
 					</ul>
-				</nav>
-				<footer>
-					<div class="copy-box">COPIED!</div> 
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/mark-naeem" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/MarkNaeem" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li onclick="onClick();"><a style="cursor:pointer" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-				</footer>
-			</section>
+					Due to some circumstances, we could not purchase the spring dampers. So, we had to demo the
+					platform, with some spare legs that were already in the lab, while being held above the ground as
+					the legs were too weak to support the platform weight.
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+					Below is the figure of the regular compliant legs used in the RHex platform and the suggested
+					design. There are also some videos showing the simulation and the demo of the real platform.
+					</p>
 
-				<!-- Main -->
-					<div id="main">
-
-						<!-- One -->
-							<section id="one">
-								<div class="image main" data-position="bottom" >
-									<img src="../images/banner1.jpg" alt="" />
-								</div>
-								<div class="container">
-									<header class="major">
-										<h2>RHex</h2>
-									</header>
-									<p>RHex was a project that I worked on as an undergraduate visiting resaercher at the university of central Lanchasire (UCLan). The visit was a grant by Erasmus+. UCLan and Erasmus representitives test-ed and interviewed the top students of Ainshams University, me and another colleauge were selected for the first time from our university. The visit was 92 days in Summer 2019.<br/><br/>
-									
-										The task was to build an off-road mobile platform. We were then asked to build the simple hexabot RHex robot. So, I was chosen to Lead a team of three undergraduate researchers (me and two others). My tasks were to manage and balance the work between team members, and I was responsible for the software, simulation, and control part.
-
-										<br/><br/><b>What did I do in the project?</b>
-										<ul>
-											<li>Proposed a new design for the complinet leg of the robot. RHex original design uses a C shaped leg and depends on the springiness of the structure and the material properties. I desigend a rigid three-segment leg with an RC car or bike suspension spring damper as the source of compliance in the system. This should make the whole manufacturing process easier and eliminate an annoying point of failure (failure of the compliant component of the leg). Moreover, the damper stifness is variable, which gives the system more freedom to work on many terrains.</li>
-											<li>Led a team consisting of three researchers to design, simulate, and build the robot.</li>
-											<li>Designed the joints trajectories so that at least three legs should be incontact with the ground at any given time.</li>
-											<li>Designed the leg joints velocity profiles based on the robot's locomotion and gait analysis.</li>
-											<li>Wrote the embedded code that controlled each joint to follow its trajectory.</li>
-											<li>Build the robot in vrep simulation, and made a simple demo logic with an ultrasonic sensor to turn the robot when it senses a wall.</li>
-											<li>Implemented all this in a real simple and low-cost platform.</li>											
-										</ul>
-										Due to some circumstances, we could not purchase the spring dampers. So, we had to demo the platform, with some spare legs that were already in the lab, while being held above the ground as the legs were too weak to support the platform weight.
-
-										Below is the figure of the regular compliant legs used in the RHex platform and the suggested design. There are also some videos showing the simulation and the demo of the real platform.
-										</p>
-
-										<div class="gallery">
-											<a href="../images/rhex-legs.jpeg" data-lightbox="mygallery" data-title="The ordinary compliant legs of the RHex platform"><img src="../images/rhex-legs.jpeg"></a>
-											<a href="../images/rhex-legdesign.gif" data-lightbox="mygallery" data-title="The proposed leg design."><img src="../images/rhex-legdesign.gif"></a>
-										</div>
-	
-										<br/><br/>
-										<video width="720" height="480" controls >
-											<source src="../videos/rhex/real_rhex.mp4" type="video/mp4">
-										</video>
-										<video width="720" height="480" controls >
-											<source src="../videos/rhex/Rhex-vrep.mp4" type="video/mp4">
-										</video>
-										<br/><br/>
-										<ul><a href="../index.html#three" class="button">Back</a></ul>
-
-								</div>
-							</section>
-
-
-
+					<div class="gallery">
+						<a href="../images/rhex-legs.jpeg" data-lightbox="mygallery"
+							data-title="The ordinary compliant legs of the RHex platform"><img
+								src="../images/rhex-legs.jpeg"></a>
+						<a href="../images/rhex-legdesign.gif" data-lightbox="mygallery"
+							data-title="The proposed leg design."><img src="../images/rhex-legdesign.gif"></a>
 					</div>
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
+					<br /><br />
+					<video width="720" height="480" controls>
+						<source src="../videos/rhex/real_rhex.mp4" type="video/mp4">
+					</video>
+					<video width="720" height="480" controls>
+						<source src="../videos/rhex/Rhex-vrep.mp4" type="video/mp4">
+					</video>
+					<br /><br />
+					<ul><a href="../index.html#three" class="button">Back</a></ul>
 
+				</div>
+			</section>
+
+
+
+		</div>
+
+		<!-- Footer -->
+		<section id="footer">
+			<div class="container">
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved.</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
 			</div>
+		</section>
 
-		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/lightbox.js"></script>
-			<script src="../assets/js/jquery.scrollex.min.js"></script>
-			<script src="../assets/js/jquery.scrolly.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
+	</div>
 
-	</body>
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/lightbox.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+
+</body>
+
 </html>

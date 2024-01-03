@@ -5,102 +5,125 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Mark's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
-	</head>
-	<body class="is-preload">
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="../images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Mark Naeem</a></h1>
-					<p>I'm Mark and this is my portfolio.<br />
-					Hope you like it! :)</p>
-				</header>
-				<nav id="nav">
-					<ul>
+<head>
+	<title>Mark's Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<section id="header">
+		<header>
+			<span class="image avatar"><img src="../images/avatar.jpg" alt="" /></span>
+			<h1 id="logo"><a href="#">Mark Naeem</a></h1>
+			<p>I'm Mark and this is my portfolio.<br />
+				Hope you like it! :)</p>
+		</header>
+		<nav id="nav">
+			<ul>
+			</ul>
+		</nav>
+		<footer>
+			<div class="copy-box">COPIED!</div>
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/mark-naeem" target="_blank"
+						class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/MarkNaeem" target="_blank" class="icon brands fa-github"><span
+							class="label">Github</span></a></li>
+				<li onclick="onClick();"><a style="cursor:pointer" class="icon solid fa-envelope"><span
+							class="label">Email</span></a></li>
+			</ul>
+		</footer>
+	</section>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- One -->
+			<section id="one">
+				<div class="image main" data-position="bottom">
+					<img src="../images/banner1.jpg" alt="" />
+				</div>
+				<div class="container">
+					<header class="major">
+						<h2>Depth Yolact ROS</h2>
+					</header>
+					<p>This is a ROS wrapper for Yolact that extends it by utilising a depth image to generate 3D
+						bounding boxes and pointclouds of the detected objects.
+					<ul class="feature-icons">
+						<li class="icon brands fa-github"><a href="https://github.com/MarkNaeem/depth_yolact_ros"
+								target="_blank">GitHub</a></li>
 					</ul>
-				</nav>
-				<footer>
-					<div class="copy-box">COPIED!</div> 
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/mark-naeem" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/MarkNaeem" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li onclick="onClick();"><a style="cursor:pointer" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-				</footer>
-			</section>
+					depth_yolact_ros is a pipeline. It:
+					<li>takes the detection boxes and their associated masks.</li>
+					<li>crops the depth image using the masks.</li>
+					<li>takes the masked pixels for each object and converts them to pointclouds using the camera
+						intrinsics from the /camera_info topic.</li>
+					<li>then filters the points for any mislabeled pixel in the mask using k-means clustering first</li>
+					<li>then a Gaussian model to reject outliers on the depth axis.</li>
+					Each detected instance runs on a thread and all results are published on a MarkerArray topic and a
+					pointcloud topic.
+					<br /><br />The package runs at around 10 Hz on an NVIDIA GTX 1660 4Gb GPU with a realsense camera.
+					There is a lot of modifications that can be done to make the package much faster. I have included a
+					<i>what's next?</i> section in the Github repo. Please feel free to contact me if you have any
+					questions!
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+					<br /><br />Below are two videos showing the the package working on a real D435i camera and in
+					gazebo with a D435 camera on a turtlebot robot.
 
-				<!-- Main -->
-					<div id="main">
-
-						<!-- One -->
-							<section id="one">
-								<div class="image main" data-position="bottom" >
-									<img src="../images/banner1.jpg" alt="" />
-								</div>
-								<div class="container">
-									<header class="major">
-										<h2>Depth Yolact ROS</h2>
-									</header>
-									<p>This is a  ROS wrapper for Yolact that extends it by utilizing a depth image to generate 3D bounding boxes and pointclouds of the detected objects.
-										<ul class="feature-icons">											
-											<li class="icon brands fa-github"><a href="https://github.com/MarkNaeem/depth_yolact_ros" target="_blank">GitHub</a></li>
-										</ul>
-										depth_yolact_ros takes the detection boxes and the associated masks, crops the depth image, takes the masked pixels, converts them to a pointcloud using the camera_info, then filters the points for any mislabeled pixel in the mask using k-means clustering first, then a Gaussian model to reject outliers on the depth axis. Each detected instance runs on a thread and all results are published on a MarkerArray topic and a pointcloud topic.
-										<br/><br/>The package is running around 10 Hz on a 4Gb GPU with a realsense camera. There is a lot of modifications that can be done to make the package much faster. I have included a <i>what's next?</i> section in the Github repo. Please feel free to contact me if you have any questions!
-	
-										<br/><br/>Below are two videos showing the the package working on a real D435i camera and in gazebo with a D435 camera on a turtlebot robot.										
-										
-										</p>
-										<div class="iframe-container">
-											<iframe width="720" height="480" src="https://www.youtube.com/embed/7B8EzT0luMM"
-											title="YouTube video player" frameborder="0"
-											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-										</div>
-										<br/>
-										<div class="iframe-container">
-											<iframe width="720" height="480" src="https://www.youtube.com/embed/WEpLgTxviIM"
-											title="YouTube video player" frameborder="0"
-											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-											</div>
-
-										<br/><br/>
-										<ul><a href="../index.html#three" class="button">Back</a></ul>
-
-								</div>
-							</section>
-
-
-
+					</p>
+					<div class="iframe-container">
+						<iframe width="720" height="480" src="https://www.youtube.com/embed/7B8EzT0luMM"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen></iframe>
+					</div>
+					<br />
+					<div class="iframe-container">
+						<iframe width="720" height="480" src="https://www.youtube.com/embed/WEpLgTxviIM"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen></iframe>
 					</div>
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
+					<br /><br />
+					<ul><a href="../index.html#three" class="button">Back</a></ul>
 
+				</div>
+			</section>
+
+
+
+		</div>
+
+		<!-- Footer -->
+		<section id="footer">
+			<div class="container">
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved.</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
 			</div>
+		</section>
 
-		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/jquery.scrollex.min.js"></script>
-			<script src="../assets/js/jquery.scrolly.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
+	</div>
 
-	</body>
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+
+</body>
+
 </html>

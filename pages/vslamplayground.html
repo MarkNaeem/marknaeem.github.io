@@ -53,35 +53,28 @@
 				</div>
 				<div class="container">
 					<header class="major">
-						<h2>Move Base Sequence</h2>
+						<h2>VSLAM Playground</h2>
 					</header>
-					<p>This is a ROS package that uses a ROS Action server to manage sending multiple goals to the
-						navigation stack (move base action server) on a robot in order to achieve them one after
-						another.
-						The package handles everything regarding the goals such as receiving, storing, sending, and
-						error handling.<br /><br />
-
-						I have clearly explained it on Github and ROS Wiki
+					<p>This is a project where I experiment with modern deep learning-based components to build a full
+						Visual SLAM pipeline.The project will be using KITTI dataset initially, but the pipeline is meant to be working
+						real-time on autonomous platforms.<br><br>
+						The project compares different new feature detectors/descriptors such as SuperPoint and DISK,
+						in combination with some feature matchers like SuperGlue and LightGlue.
+						It also compares different motion estimation techniques in monocular and stereo visual odometry such as essential matrix estimation
+						or the PnP (Prespective N Point) algorithms. Depth is created from LiDAR scans by projecting the scanned points onto an image plane
+						and some deep stereo depth estimation networks such as HITNet.<br><br> 
+						The code is open-source and available on GitHub. I am also writing blogs about Visual Odometry and SLAM while working on this project.
 					<ul class="feature-icons">
-
-						<li class="icon solid fa-book"><a href="http://wiki.ros.org/move-base-sequence"
-								target="_blank">ros wiki</a></li>
-						<li class="icon brands fa-github"><a href="https://github.com/MarkNaeem/move_base_sequence"
+						<li class="icon brands fa-github"><a href="https://github.com/MarkNaeem/depth_yolact_ros"
 								target="_blank">GitHub</a></li>
 					</ul>
-
-					Below is a video showing the usage of the package.
-
+					Im sharing the progress steps over a YouTube playlist:
 					</p>
-					<div class="iframe-container">
-						<iframe width="720" height="480" src="https://www.youtube.com/embed/afTX3Mg4qq4"
-							title="YouTube video player" frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen></iframe>
-					</div>
-
-					<br /><br />P.S. The thumbnail image of the project was taken from a video from my graduation
-					project.
+					<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/videoseries?si=ArtFNMEDP1J2Fx4B&amp;list=PLhm5SdwBiVH17foMkGdLdS-AsiN2zpOmR"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowfullscreen></iframe>
 					<br /><br />
 					<ul><a href="../index.html#three" class="button">Back</a></ul>
 

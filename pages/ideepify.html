@@ -5,119 +5,173 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Mark's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<link rel="stylesheet" href="../assets/css/lightbox.css" />
-	</head>
-	<body class="is-preload">
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="../images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Mark Naeem</a></h1>
-					<p>I'm Mark and this is my portfolio.<br />
-					Hope you like it! :)</p>
-				</header>
-				<nav id="nav">
-					<ul>
-					</ul>
-				</nav>
-				<footer>
-					<div class="copy-box">COPIED!</div> 
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/mark-naeem" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/MarkNaeem" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li onclick="onClick();"><a style="cursor:pointer" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-				</footer>
-			</section>
+<head>
+	<title>Mark's Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<link rel="stylesheet" href="../assets/css/lightbox.css" />
+</head>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<body class="is-preload">
 
-				<!-- Main -->
-					<div id="main">
+	<!-- Header -->
+	<section id="header">
+		<header>
+			<span class="image avatar"><img src="../images/avatar.jpg" alt="" /></span>
+			<h1 id="logo"><a href="#">Mark Naeem</a></h1>
+			<p>I'm Mark and this is my portfolio.<br />
+				Hope you like it! :)</p>
+		</header>
+		<nav id="nav">
+			<ul>
+			</ul>
+		</nav>
+		<footer>
+			<div class="copy-box">COPIED!</div>
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/mark-naeem" target="_blank"
+						class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/MarkNaeem" target="_blank" class="icon brands fa-github"><span
+							class="label">Github</span></a></li>
+				<li onclick="onClick();"><a style="cursor:pointer" class="icon solid fa-envelope"><span
+							class="label">Email</span></a></li>
+			</ul>
+		</footer>
+	</section>
 
-						<!-- One -->
-							<section id="one">
-								<div class="image main" data-position="bottom" >
-									<img src="../images/banner1.jpg" alt="" />
-								</div>
-								<div class="container">
-									<header class="major">
-										<h2>IDeepify</h2>
-									</header>
-									<p>IDeepify is a full KYC (know your customer).
-										<ul>	
-											IDeepify is deep learning-based. It consists of four parts:
-											<li><b>ID localization and cropping:</b> Detects the face or the back of the ID, extracts the corners, and crops the ID.</li>
-											<li><b>Face detection and verification:</b> Extracts the face picutre from the ID and verifies it is the same person in the selfie picutre.</li>
-											<li><b>Text segmentation:</b> A segmentation network the background and only keeps the text to ease the OCR step. </li>
-											<li><b>OCR:</b> Optical character recognition step, and the final one.</li>
-										</ul>
-										Second stage of face verification utilizes a collection of pre-trained face verification models. The "meta-model" was then finetuned with a few pairs of (Selfie, ID). Finally, the total accuracy was tested with <a  onclick="window.open('http://vintage.winklerbros.net/facescrub.html','_blank');">FaceScrub Dataset</a> and it was 92%.
-										<br/><br/>Below is shown some results of the other mentioned steps.						
-										</p>
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-									<div class="gallery">
-										<a href="../images/ideepify-image0.jpg" data-lightbox="mygallery" data-title="The examples in the image shows how well IDs are localized"><img src="../images/ideepify-image0.jpg"></a>
-										<a href="../images/ideepify-image1.jpg" data-lightbox="mygallery" data-title="The examples in the image shows how well IDs are localized"><img src="../images/ideepify-image1.jpg"></a>
-										<a href="../images/ideepify-image2.jpg" data-lightbox="mygallery" data-title="The examples in the image shows how well IDs are localized"><img src="../images/ideepify-image2.jpg"></a>
-										<a href="../images/ideepify-image3.jpg" data-lightbox="mygallery" data-title="The examples in the image shows how well IDs are localized"><img src="../images/ideepify-image3.jpg"></a>
-										<a href="../images/ideepify-image4.jpg" data-lightbox="mygallery" data-title="The examples in the image shows how well IDs are localized"><img src="../images/ideepify-image4.jpg"></a>
-										<a href="../images/ideepify-image5.jpg" data-lightbox="mygallery" data-title="The examples in the image shows how well IDs are localized"><img src="../images/ideepify-image5.jpg"></a>
-										<a href="../images/ideepify-image6.jpg" data-lightbox="mygallery" data-title="The examples in the image shows how well IDs are localized"><img src="../images/ideepify-image6.jpg"></a>
-										<a href="../images/ideepify-tri_image1.jpg" data-lightbox="mygallery" data-title="The examples in the image shows how text is segmented and background removed"><img src="../images/ideepify-tri_image1.jpg"></a>
-										<a href="../images/ideepify-tri_image2.jpg" data-lightbox="mygallery" data-title="The examples in the image shows how text is segmented and background removed"><img src="../images/ideepify-tri_image2.jpg"></a>
-										<a href="../images/ideepify-tri_image3.jpg" data-lightbox="mygallery" data-title="The examples in the image shows how text is segmented and background removed"><img src="../images/ideepify-tri_image3.jpg"></a>
-										<a href="../images/ideepify-tri_image4.jpg" data-lightbox="mygallery" data-title="The examples in the image shows how text is segmented and background removed"><img src="../images/ideepify-tri_image4.jpg"></a>
-										<a href="../images/ideepify-tri_image5.jpg" data-lightbox="mygallery" data-title="The examples in the image shows how text is segmented and background removed"><img src="../images/ideepify-tri_image5.jpg"></a>
-										<a href="../images/ideepify-tri_image6.jpg" data-lightbox="mygallery" data-title="The examples in the image shows how text is segmented and background removed"><img src="../images/ideepify-tri_image6.jpg"></a>
-										<a href="../images/ideepify-tri_image7.jpg" data-lightbox="mygallery" data-title="The examples in the image shows how text is segmented and background removed"><img src="../images/ideepify-tri_image7.jpg"></a>
-										<a href="../images/ideepify-tri_image8.jpg" data-lightbox="mygallery" data-title="The examples in the image shows how text is segmented and background removed"><img src="../images/ideepify-tri_image8.jpg"></a>
-										<a href="../images/ideepify-gen_id1.jpg" data-lightbox="mygallery" data-title="This image shows a synthetic ID similar those used in training"><img src="../images/ideepify-gen_id1.jpg"></a>
-										<a href="../images/ideepify-gen_id2.jpg" data-lightbox="mygallery" data-title="This image shows a synthetic ID similar those used in training"><img src="../images/ideepify-gen_id2.jpg"></a>
-									</div>
+		<!-- Main -->
+		<div id="main">
 
-									<p>This video shows real-time ID localization and text segmentation with different angles, backgrounds and location of the ID in the picture.</p>
-									<video width="720" height="480" controls >
-											<source src="../videos/ideepify/video1.mp4" type="video/mp4">
-										</video>												
+			<!-- One -->
+			<section id="one">
+				<div class="image main" data-position="bottom">
+					<img src="../images/banner1.jpg" alt="" />
+				</div>
+				<div class="container">
+					<header class="major">
+						<h2>IDeepify</h2>
+					</header>
+					<p>
+						IDeepify a full end-to-end deep learning-based KYC (Know Your Customer) product. It consisted of
+						multiple stages:
+						<li><b>Face detection</b>: faces are detected in the verification document (government ID) and
+							in a live selfie, cropped, and then sent to the face matching component.</li>
+						<li><b>Face matching</b>: the two detected faces are passed through a set of fine-tuned
+							pretrained facial embedding networks, then through a set of distance metrics that are then
+							fed into a classifier. This managed to achieve 97% accuracy on FaceScrub dataset.</li>
+						<li><b>ID localisation and segmentation</b>: an attention-based segmentation network was trained
+							on a collected tiny dataset (less than 10 samples) that was augmented with synthetic data.
+							The network is used to segment the verification ID from the background. The ID's four
+							corners are then extracted and used to run a perspective transform to prepare it for text
+							extraction.</li>
+						<li><b>Text segmentation and extraction</b>: The ID is then passed into another attention-based
+							segmentation network that was fully trained on synthetic data. The network segments the text
+							from the background to make it easier for the OCR step.</li>
+						<li><b>Arabic OCR</b>: at the time when this model was being trained, no publicly available
+							Arabic OCR solution was robust enough for production use. This network was trained
+							completely on synthetic data to extract Arabic letters and numbers. A last validity and
+							correction check was implemented to ensure the OCR results are consistent.</li>
 
-									<p><br/>Implementation details can be discussed upon request.</p>
-									<ul><a href="../index.html#three" class="button">Back</a></ul>
+						<br />Below is shown some results of the other mentioned steps.
+					</p>
 
-								</div>
-							</section>
-
-
-
+					<div class="gallery">
+						<a href="../images/ideepify-image0.jpg" data-lightbox="mygallery"
+							data-title="The examples in the image shows how well IDs are localized"><img
+								src="../images/ideepify-image0.jpg"></a>
+						<a href="../images/ideepify-image1.jpg" data-lightbox="mygallery"
+							data-title="The examples in the image shows how well IDs are localized"><img
+								src="../images/ideepify-image1.jpg"></a>
+						<a href="../images/ideepify-image2.jpg" data-lightbox="mygallery"
+							data-title="The examples in the image shows how well IDs are localized"><img
+								src="../images/ideepify-image2.jpg"></a>
+						<a href="../images/ideepify-image3.jpg" data-lightbox="mygallery"
+							data-title="The examples in the image shows how well IDs are localized"><img
+								src="../images/ideepify-image3.jpg"></a>
+						<a href="../images/ideepify-image4.jpg" data-lightbox="mygallery"
+							data-title="The examples in the image shows how well IDs are localized"><img
+								src="../images/ideepify-image4.jpg"></a>
+						<a href="../images/ideepify-image5.jpg" data-lightbox="mygallery"
+							data-title="The examples in the image shows how well IDs are localized"><img
+								src="../images/ideepify-image5.jpg"></a>
+						<a href="../images/ideepify-image6.jpg" data-lightbox="mygallery"
+							data-title="The examples in the image shows how well IDs are localized"><img
+								src="../images/ideepify-image6.jpg"></a>
+						<a href="../images/ideepify-tri_image1.jpg" data-lightbox="mygallery"
+							data-title="The examples in the image shows how text is segmented and background removed"><img
+								src="../images/ideepify-tri_image1.jpg"></a>
+						<a href="../images/ideepify-tri_image2.jpg" data-lightbox="mygallery"
+							data-title="The examples in the image shows how text is segmented and background removed"><img
+								src="../images/ideepify-tri_image2.jpg"></a>
+						<a href="../images/ideepify-tri_image3.jpg" data-lightbox="mygallery"
+							data-title="The examples in the image shows how text is segmented and background removed"><img
+								src="../images/ideepify-tri_image3.jpg"></a>
+						<a href="../images/ideepify-tri_image4.jpg" data-lightbox="mygallery"
+							data-title="The examples in the image shows how text is segmented and background removed"><img
+								src="../images/ideepify-tri_image4.jpg"></a>
+						<a href="../images/ideepify-tri_image5.jpg" data-lightbox="mygallery"
+							data-title="The examples in the image shows how text is segmented and background removed"><img
+								src="../images/ideepify-tri_image5.jpg"></a>
+						<a href="../images/ideepify-tri_image6.jpg" data-lightbox="mygallery"
+							data-title="The examples in the image shows how text is segmented and background removed"><img
+								src="../images/ideepify-tri_image6.jpg"></a>
+						<a href="../images/ideepify-tri_image7.jpg" data-lightbox="mygallery"
+							data-title="The examples in the image shows how text is segmented and background removed"><img
+								src="../images/ideepify-tri_image7.jpg"></a>
+						<a href="../images/ideepify-tri_image8.jpg" data-lightbox="mygallery"
+							data-title="The examples in the image shows how text is segmented and background removed"><img
+								src="../images/ideepify-tri_image8.jpg"></a>
+						<a href="../images/ideepify-gen_id1.jpg" data-lightbox="mygallery"
+							data-title="This image shows a synthetic ID similar those used in training"><img
+								src="../images/ideepify-gen_id1.jpg"></a>
+						<a href="../images/ideepify-gen_id2.jpg" data-lightbox="mygallery"
+							data-title="This image shows a synthetic ID similar those used in training"><img
+								src="../images/ideepify-gen_id2.jpg"></a>
 					</div>
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
+					<p>This video shows real-time ID localization and text segmentation with different angles,
+						backgrounds and location of the ID in the picture.</p>
+					<video width="720" height="480" controls>
+						<source src="../videos/ideepify/video1.mp4" type="video/mp4">
+					</video>
 
+					<p><br />Implementation details can be discussed upon request.</p>
+					<ul><a href="../index.html#three" class="button">Back</a></ul>
+
+				</div>
+			</section>
+
+
+
+		</div>
+
+		<!-- Footer -->
+		<section id="footer">
+			<div class="container">
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved.</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
 			</div>
+		</section>
 
-		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/lightbox.js"></script>
-			<script src="../assets/js/jquery.scrollex.min.js"></script>
-			<script src="../assets/js/jquery.scrolly.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
+	</div>
 
-	</body>
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/lightbox.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+
+</body>
+
 </html>
